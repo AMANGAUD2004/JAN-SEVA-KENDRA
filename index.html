@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jan Seva Kendra — Digital Services Hub</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'neon-blue': '#00B4FF',
+            'neon-blue-dark': '#0086CC',
+            'bg-dark': '#0B1220',
+            'panel': '#07101a',
+            'muted': '#98A2B3',
+            'accent-orange': '#F59E0B'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            neon: '0 10px 40px rgba(0, 180, 255, 0.14), 0 0 30px rgba(0,180,255,0.08) inset'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(180deg,#040612 0%, #071122 60%); color: #E6EEF7; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .neon-glow { text-shadow: 0 6px 30px rgba(0,180,255,0.16); }
+    .hero-mask::after{
+      content:'';
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,20,40,0.28), rgba(0,10,20,0.6));
+      z-index:0;
+    }
+    /* small accessible focus ring */
+    :focus { outline: 3px solid rgba(0,180,255,0.18); outline-offset: 2px; }
+    /* simple indicator to prevent accidental blanking — hidden for users */
+    #site-template { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Header (sticky) -->
+  <header id="site-header" class="sticky top-0 z-50 backdrop-blur-sm bg-black/50 border-b border-white/6">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-neon-blue to-neon-blue-dark rounded-xl shadow-neon flex items-center justify-center">
+          <div class="w-12 h-12 bg-gradient-to-br from-neon-blue to-neon-blue-dark rounded-xl shadow-neon flex items-center justify-center">
+    <img src="Gemini_Generated_Image_1rcy311rcy311rcy.png" alt="Logo" class="w-10 h-10 object-contain" />
+</div>
+
+        </div>
+        <div>
+          <h1 class="text-xl font-extrabold neon-glow tracking-wide">JAN SEVA KENDRA</h1>
+          <div class="text-xs text-muted -mt-1">Digitalizing essential services • Trusted by your community</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-200">
+        <a href="#services" class="nav-link hover:text-neon-blue transition">Services</a>
+        <a href="#reviews" class="nav-link hover:text-neon-blue transition">Reviews</a>
+        <a href="#team" class="nav-link hover:text-neon-blue transition">Team</a>
+        <a href="#certificates" class="nav-link hover:text-neon-blue transition">Certificates</a>
+        <a href="#contact" class="nav-link hover:text-neon-blue transition">Contact</a>
+        <a href="#about" class="nav-link hover:text-neon-blue transition">About Us</a>
+        <a href="https://www.google.com/maps" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neon-blue text-black font-semibold hover:scale-[1.03] transition transform shadow">
+          Visit Us
+        </a>
+      </nav>
+
+      <!-- Mobile menu / CTA -->
+      <div class="md:hidden flex items-center gap-3">
+        <button id="mobile-toggle" aria-label="Open menu" class="p-2 rounded-lg bg-white/5 hover:bg-white/7">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-white"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main app container -->
+  <main id="app" class="relative">
+
+    <!-- Hero -->
+    <section id="home" class="relative hero-mask overflow-hidden">
+      <div class="absolute inset-0 -z-10" style="background: radial-gradient(600px 400px at 10% 20%, rgba(0,180,255,0.08), transparent), radial-gradient(500px 300px at 90% 80%, rgba(0,130,204,0.06), transparent);"></div>
+
+      <div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div class="space-y-6">
+            <h2 class="text-5xl md:text-6xl font-extrabold leading-tight neon-glow">
+              Jan Seva Kendra
+            </h2>
+            <p class="text-lg text-muted max-w-2xl">
+              Your trusted digital hub for Government, semi-government and essential services. Fast, secure and friendly assistance — powered locally.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-6">
+              <a href="#services" class="action-btn inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-neon-blue text-black font-semibold shadow hover:scale-[1.03] transition">
+                Start a Service
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-90"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+
+              <a href="#contact" class="inline-flex items-center gap-3 px-5 py-3 rounded-xl border border-white/8 text-sm hover:bg-white/3 transition">
+                Contact Us
+              </a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-6">
+              <div class="text-center">
+                <div class="text-2xl font-bold neon-glow">10k+</div>
+                <div class="text-xs text-muted">Services delivered</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold neon-glow">4.9</div>
+                <div class="text-xs text-muted">Average rating</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold neon-glow">3</div>
+                <div class="text-xs text-muted">Founders</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual / card stack -->
+          <div class="relative">
+            <div class="absolute -left-6 -top-10 w-[380px] h-[220px] rounded-2xl bg-gradient-to-br from-neon-blue/30 to-neon-blue-dark/10 blur-3xl opacity-80"></div>
+
+            <div class="space-y-5">
+              <div class="p-6 rounded-2xl bg-panel/80 border border-white/4 shadow-neon transform translate-y-0 hover:translate-y-[-6px] transition">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <div class="text-xs text-muted uppercase font-semibold">Quick Service</div>
+                    <div class="text-lg font-bold">Aadhaar, PAN, Voter & More</div>
+                    <div class="text-sm text-muted mt-2">We handle the forms and portal submissions for you — transparent and fast.</div>
+                  </div>
+                  <div class="rounded-lg p-3 bg-gradient-to-tr from-neon-blue to-neon-blue-dark shadow">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2L15 9H22L16 13L18 20L12 16L6 20L8 13L2 9H9L12 2Z" fill="white"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-gradient-to-br from-white/3 to-transparent border border-white/6 backdrop-blur-sm shadow transform translate-y-2 hover:translate-y-[-6px] transition">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="font-semibold text-lg">Utility Payments</div>
+                    <div class="text-sm text-muted">Electricity, water and municipal payments with instant receipts.</div>
+                  </div>
+                  <div class="text-sm font-bold text-neon-blue">Instant</div>
+                </div>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-panel/80 border border-white/4 shadow transform translate-y-4 hover:translate-y-[-6px] transition">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <div class="text-sm text-muted">Trusted Help</div>
+                    <div class="text-lg font-bold">Passport & ITR Guidance</div>
+                  </div>
+                  <div class="rounded-full w-12 h-12 bg-neon-blue flex items-center justify-center text-black font-semibold">ITR</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h3 class="text-3xl font-extrabold">Our Services</h3>
+            <p class="text-muted max-w-2xl mt-1">From identity documents to bill payments — everything under one roof.</p>
+          </div>
+          <div class="hidden md:flex gap-3">
+            <button id="show-all" class="px-4 py-2 rounded-lg bg-neon-blue text-black font-semibold">View All</button>
+            <button id="download-list" class="px-4 py-2 rounded-lg border border-white/6">Download</button>
+          </div>
+        </div>
+
+        <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service cards inserted by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-16 md:py-24 bg-gradient-to-b from-transparent to-white/2 border-t border-white/6">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-3xl font-extrabold mb-3">Trusted by the Community</h3>
+        <p class="text-muted mb-8">Real feedback from people who used our services.</p>
+
+        <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Reviews appended by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+<section id="about" class="py-20 bg-gradient-to-b from-transparent to-white/5 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-4xl font-extrabold text-center mb-6 neon-glow">About Us</h3>
+    <p class="text-muted text-center max-w-3xl mx-auto mb-12">
+      Jan Seva Kendra has been delivering trusted digital services for more than <strong>5 years</strong>.
+      We are dedicated to simplifying essential government and semi-government services for every citizen.
+    </p>
+
+    <div class="space-y-6 text-lg leading-relaxed text-gray-300">
+      <p>
+        Our center was established with a mission to remove the hurdles in accessing public services.
+        From identity documents to utility bill payments, we ensure speed, accuracy, and transparency.
+      </p>
+
+      <p>
+        Under the leadership of <strong>Aman Gaud</strong>, the Founder and
+        <strong>State Head of ZENPAY (Maharashtra)</strong>, Jan Seva Kendra has grown into a trusted
+        digital service provider known for professionalism and reliability.
+      </p>
+
+      <p>
+        ZENPAY, a major digital payment and e-governance platform, plays a big role in our operational excellence.
+        As the State Head, Aman ensures our center stays updated with the latest tools, security, and high-standard workflow.
+      </p>
+
+      <p>
+        Our Co-Founders, <strong>Ravindra Das</strong> and <strong>Piyush Prajapati</strong>,
+        bring strong technical and customer-focused experience. Together, they ensure efficient documentation,
+        cyber services, and smooth support for thousands of users each year.
+      </p>
+
+      <p>
+        We now provide over <strong>50+ government and digital services</strong> including:
+        Aadhaar updates, PAN card services, MSME (Udyam) registration, Gumasta (Shop Act),
+        passport assistance, ticket booking, income tax filing, utility payments, and more.
+      </p>
+
+      <p>
+        Our vision is simple — <strong>make government services easier, faster, and accessible to everyone.</strong>
+      </p>
+
+      <p>
+        We thank all our customers for trusting Jan Seva Kendra and promise to deliver
+        excellent service every single day.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Team -->
+    <section id="team" class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-extrabold mb-4">Meet The Founders</h3>
+        <p class="text-muted mb-10">People behind the service.</p>
+
+        <div class="flex flex-wrap justify-center gap-8">
+          <!-- Founders -->
+          <div class="w-full sm:w-80 bg-panel/70 p-6 rounded-2xl border border-white/6 shadow">
+            <img src="aman.png" alt="Aman Gaud" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-neon-blue">
+            <h4 class="font-bold text-xl">Aman Gaud</h4>
+            <div class="text-sm text-muted mb-2">Founder & State Head</div>
+            <p class="text-sm text-muted">Visionary leader ensuring top-tier service delivery across Maharashtra.</p>
+          </div>
+
+          <div class="w-full sm:w-80 bg-panel/70 p-6 rounded-2xl border border-white/6 shadow">
+            <img src="https://placehold.co/128x128/0086CC/ffffff?text=R" alt="Ravindra Das" class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-neon-blue">
+            <h4 class="font-bold text-xl">Ravindra Das</h4>
+            <div class="text-sm text-muted mb-2">Co-Founder</div>
+            <p class="text-sm text-muted">Expert in digital systems and operations.</p>
+          </div>
+
+          <div class="w-full sm:w-80 bg-panel/70 p-6 rounded-2xl border border-white/6 shadow">
+            <img src="piyush.jpg" alt="Piyush Prajapati" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-neon-blue">
+            <h4 class="font-bold text-xl">Piyush Prajapati</h4>
+            <div class="text-sm text-muted mb-2">Co-Founder</div>
+            <p class="text-sm text-muted">Focuses on customer support and personalized assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CERTIFICATES SECTION -->
+<section id="certificates" class="py-20 bg-gradient-to-br from-[#0a1a2a]/30 to-[#001018]/40">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-4xl font-extrabold text-center mb-10 neon-glow">Our Certifications</h3>
+    <p class="text-muted text-center max-w-2xl mx-auto mb-12">
+      Official certificates and recognitions that strengthen our trust and credibility.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="bg-panel/70 p-5 rounded-2xl border border-white/10 shadow-neon">
+        <img src="cert1.jpg" class="w-full h-64 rounded-xl object-cover" alt="Certificate 1">
+        <p class="text-center mt-3 font-semibold text-neon-blue">Government Service Authorization</p>
+      </div>
+
+      <div class="bg-panel/70 p-5 rounded-2xl border border-white/10 shadow-neon">
+        <img src="cert2.jpg" class="w-full h-64 rounded-xl object-cover" alt="Certificate 2">
+        <p class="text-center mt-3 font-semibold text-neon-blue">Digital Services License</p>
+      </div>
+
+      <div class="bg-panel/70 p-5 rounded-2xl border border-white/10 shadow-neon">
+        <img src="cert3.jpg" class="w-full h-64 rounded-xl object-cover" alt="Certificate 3">
+        <p class="text-center mt-3 font-semibold text-neon-blue">ZENPAY State Head Recognition</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 md:py-20 bg-gradient-to-tr from-[#00121a] to-[#04202b]">
+      <div class="max-w-7xl mx-auto px-6 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-black/20 border border-white/6">
+    <div class="text-sm text-muted font-semibold">AMAN'S Email</div>
+    <a href="mailto:amangaud448@gmail.com" class="block mt-2 font-semibold text-neon-blue">
+        amangaud448@gmail.com
+    </a>
+
+    <div class="text-sm text-muted font-semibold mt-5">RAVINDRA'S Email</div>
+    <a href="mailto:ravindra@gmail.com" class="block mt-2 font-semibold text-neon-blue">
+        ravindra@gmail.com
+    </a>
+
+    <div class="text-sm text-muted font-semibold mt-5">PIYUSH'S Email</div>
+    <a href="mailto:piyush@gmail.com" class="block mt-2 font-semibold text-neon-blue">
+        piyush@gmail.com
+    </a>
+</div>
+
+          <div class="p-6 rounded-2xl bg-black/20 border border-white/6">
+            <div class="text-sm text-muted">Founder</div>
+            <a href="tel:8624882318" class="block mt-2 font-semibold text-neon-blue">Aman Gaud (8624882318)</a>
+           <div class="text-sm text-muted mt-4">Co-Founder</div>
+    <a href="tel:9766327395" class="block mt-1 font-semibold text-neon-blue">
+        Ravindra (9766327395)
+    </a>
+
+    <!-- Piyush -->
+    <div class="text-sm text-muted mt-4">Co-Founder</div>
+    <a href="tel:7972018087" class="block mt-1 font-semibold text-neon-blue">
+        Piyush (7972018087)
+    </a>
+</div>
+
+          <div class="p-6 rounded-2xl bg-black/20 border border-white/6 flex flex-col justify-between">
+            <div>
+              <div class="text-sm text-muted">Visit Us</div>
+              <a href="https://www.google.com/maps" target="_blank" rel="noopener" class="mt-2 inline-block font-semibold text-neon-blue">Find on Google Maps</a>
+            </div>
+            <div class="mt-4 text-xs text-muted">© 2025 Jan Seva Kendra</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document modal -->
+    <div id="document-modal" aria-hidden="true" class="fixed inset-0 hidden z-60 items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+      <div role="dialog" aria-modal="true" class="relative w-full max-w-xl bg-white/6 backdrop-blur-sm rounded-2xl border border-white/6 p-6">
+        <div class="flex justify-between items-start">
+          <h4 id="modal-title" class="text-xl font-bold text-white">Documents</h4>
+          <button id="modal-close" aria-label="Close" class="text-white/80 hover:text-white p-2 rounded">
+            ✕
+          </button>
+        </div>
+        <div id="modal-content" class="mt-4 text-sm text-muted">
+          <ul id="document-list" class="list-disc pl-5 space-y-2"></ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="mt-10 border-t border-white/6 py-6 text-center text-sm text-muted">
+    Jan Seva Kendra • Digitalizing India’s essential services
+  </footer>
+
+  <!-- Safe template (hidden) — allows auto-regen if main content removed accidentally -->
+  <template id="site-template">
+    <!-- This template contains the main sections (used to restore site if cleared). It is intentionally minimal
+         because the full site content is injected by JS data. -->
+    <div data-template="true"></div>
+  </template>
+
+  <!-- JavaScript: data, rendering, smooth scroll, modal, safety -->
+  <script>
+    /***************
+     * Data (kept same as your earlier list, trimmed to essential services for brevity)
+     ***************/
+    const servicesData = [
+      { title: "Aadhaar Card Correction/Update", description: "Update demographic, biometric details, or change address.", documents: ["Existing Aadhaar Card (if available)", "Proof of Identity (POI) - e.g., Voter ID, Passport", "Proof of Address - e.g., Electricity Bill (not older than 3 months)"] },
+      { title: "Shop Act Registration (Gumasta)", description: "Apply/renew Gumasta License (Maharashtra).", documents: ["Shop address proof (Rent Agreement/Tax Receipt)", "Aadhaar & PAN of Proprietor", "Photo of Shop"] },
+      { title: "Udyam (MSME) Registration", description: "Register Micro/Small/Medium Enterprises online.", documents: ["Aadhaar & PAN", "Bank account & IFSC", "Business activity description"] },
+      { title: "New PAN Card Application", description: "Apply for a new PAN (Form 49A).", documents: ["Aadhaar copy (mandatory)", "Proof of Address", "Two passport-size photos"] },
+      { title: "Voter ID Services", description: "New registration, corrections, or shifting of enrollment.", documents: ["Proof of Address", "Proof of Age", "Passport Size Photo"] },
+      { title: "Passport Application Assistance", description: "Fresh/re-issue passport application help.", documents: ["Aadhaar & other ID proofs", "POA & DOB proof", "Appointment details"] },
+      { title: "Driving License Services", description: "Learner's license, renewal & permanent license help.", documents: ["Proof of Address", "Proof of Age", "Passport Photos"] },
+      { title: "Utility Bill Payments", description: "Electricity, water & municipal bill payments.", documents: ["Previous bill copy or consumer ID", "Contact number for receipt SMS"] },
+      { title: "Printing, Photocopy & Scanning", description: "High-quality document printing, scanning & lamination.", documents: ["Digital files (USB/Email/WhatsApp)", "Original docs for photocopy/scans"] },
+      { title: "Income Tax Return (ITR) Filing Assistance", description: "Help with filing ITR for individuals & small businesses.", documents: ["PAN Card", "Aadhaar Card", "Form 16 (if salaried)", "Bank Statements", "Investment proofs"] },
+      { title: "Railway Ticket Booking Assistance", description: "Book confirmed railway tickets offline.", documents: ["ID Proof (Aadhaar, Voter ID, etc.)", "Travel details (date, train, class)"] },
+      { title: "Birth & Death Certificate Application", description: "Apply for birth/death certificates through local authorities.", documents: ["Hospital discharge summary (for birth)", "Medical certificate (for death)", "Proof of identity of applicant"] },
+      { title: "Caste & Income Certificate Application", description: "Assistance in applying for caste & income certificates.", documents: ["Proof of Address", "Proof of Identity", "Affidavit (if required)"] },
+      { title: "Ration Card Application & Update", description: "New ration card application or update existing details.", documents: ["Proof of Address", "Aadhaar Card", "Family member details"] },
+      { title: "Property Tax Payment Assistance", description: "Help with property tax payments to local municipal bodies.", documents: ["Property tax bill", "Property details (survey number, address)"] },
+      { title: "Social Welfare Scheme Enrollment", description: "Assistance in enrolling for government social welfare schemes.", documents: ["Aadhaar Card", "Income Certificate", "Caste Certificate (if applicable)"] },
+      { title: "Pension Scheme Application", description: "Help with applying for government pension schemes.", documents: ["Aadhaar Card", "Bank Passbook", "Age Proof"] },
+      { title: "Gas Connection Application", description: "Assistance in applying for new LPG gas connections.", documents: ["Proof of Address", "Proof of Identity", "Passport-size photographs"] },
+      { title: "Vehicle Registration & RC Services", description: "Help with vehicle registration & RC-related services.", documents: ["Proof of Address", "Proof of Identity", "Vehicle purchase invoice"] },
+      { title: "Health Insurance Enrollment", description: "Assistance in enrolling for government health insurance schemes.", documents: ["Aadhaar Card", "Income Certificate", "Age Proof"] },
+      { title: "Digital Literacy & Training", description: "Basic digital literacy training for individuals.", documents: ["None required"] },
+      { title: "E-Signature Registration", description: "Help with registering for e-signatures for digital documents.", documents: ["Aadhaar Card", "PAN Card", "Passport-size photograph"] },
+      { title: "GST Registration Assistance", description: "Help with GST registration for small businesses.", documents: ["PAN Card", "Proof of Business Address", "Bank Account Details"] },
+      { title: "Online Form Filling Assistance", description: "Help with filling various government online forms.", documents: ["Relevant personal/business documents as per form"] },
+      { title: "Notary & Affidavit Services", description: "Assistance with notary services & affidavit preparation.", documents: ["Original documents to be notarized", "ID Proof of applicant"] },
+      { title: "E-Aadhaar Download & Print", description: "Help with downloading & printing e-Aadhaar cards.", documents: ["Aadhaar Number or Enrollment ID"] },
+      { title: "Mobile & DTH Recharge Services", description: "Assistance with mobile & DTH recharges.", documents: ["Mobile/DTH account details"] },
+      { title: "Bank Account Opening Assistance", description: "Help with opening new bank accounts.", documents: ["Proof of Address", "Proof of Identity", "Passport-size photographs"] },
+      { title: "Digital Payment Setup", description: "Assistance in setting up digital payment methods.", documents: ["Bank account details", "Mobile number linked to bank"] },
+      { title: "E-Way Bill Generation", description: "Help with generating e-way bills for goods transport.", documents: ["Invoice details", "Transporter ID", "Vehicle details"] },
+      { title: "Trade License Application", description: "Assistance in applying for trade licenses.", documents: ["Proof of Business Address", "Aadhaar & PAN of Proprietor", "Business activity description"] },
+      { title: "Environmental Clearance Application", description: "Help with applying for environmental clearances.", documents: ["Project report", "Site plan", "Impact assessment reports"] },
+      { title: "Fire Safety Certificate Application", description: "Assistance in applying for fire safety certificates.", documents: ["Building plan", "NOC from fire department", "Safety equipment details"] },
+      { title: "Health & Sanitation License", description: "Help with obtaining health & sanitation licenses.", documents: ["Proof of Business Address", "Aadhaar & PAN of Proprietor", "Sanitation measures details"] },
+      { title: "Food License Application", description: "Assistance in applying for food licenses (FSSAI).", documents: ["Proof of Business Address", "Aadhaar & PAN of Proprietor", "Food safety measures details"] }
+    ];
+
+    const reviewsData = [
+      { name: "Ramesh Kumar", service: "Aadhaar Update", review: "Quick and efficient service for my Aadhaar correction.", rating: 5 },
+      { name: "Priya Sharma", service: "Railway Ticket Booking", review: "Booked a confirmed ticket when I couldn't online. Excellent!", rating: 5 },
+      { name: "Neha Patel", service: "Printing", review: "High-quality printing and fast service.", rating: 5 },
+      { name: "Sandeep Rao", service: "Passport", review: "Guided me step-by-step and very transparent.", rating: 5 }
+    ];
+
+    /***************
+     * Render functions
+     ***************/
+    const servicesGrid = document.getElementById('services-grid');
+    const reviewsContainer = document.getElementById('reviews-container');
+
+    function createServiceCard(s, idx) {
+      const card = document.createElement('div');
+      card.className = 'bg-gradient-to-br from-white/3 to-transparent border border-white/6 p-5 rounded-2xl shadow hover:shadow-neon transition cursor-pointer';
+      card.tabIndex = 0;
+      card.setAttribute('role','button');
+      card.innerHTML = `
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <div class="text-sm font-semibold text-neon-blue">${s.title}</div>
+            <p class="text-sm text-muted mt-2">${s.description}</p>
+          </div>
+          <div class="flex flex-col items-end gap-2">
+            <button data-index="${idx}" class="open-doc px-3 py-1 rounded bg-white/6 text-white/90 text-xs">Docs</button>
+            <div class="text-xs text-muted">More →</div>
+          </div>
+        </div>
+      `;
+      // click opens docs too
+      card.querySelector('.open-doc').addEventListener('click', (e) => { e.stopPropagation(); openModal(idx); });
+      card.addEventListener('click', () => openModal(idx));
+      card.addEventListener('keypress', (e) => { if (e.key === 'Enter') openModal(idx); });
+      return card;
+    }
+
+    function renderServices() {
+      servicesGrid.innerHTML = '';
+      servicesData.forEach((s, i) => servicesGrid.appendChild(createServiceCard(s, i)));
+    }
+
+    function createReviewCard(r) {
+      const el = document.createElement('div');
+      el.className = 'bg-panel/60 p-5 rounded-2xl border border-white/6';
+      // simple star icons
+      let stars = '';
+      for (let i=0;i<r.rating;i++) stars += '★';
+      el.innerHTML = `
+        <div class="text-neon-blue font-semibold text-sm">${stars}</div>
+        <p class="mt-2 italic text-sm text-muted">"${r.review}"</p>
+        <div class="mt-3 font-bold">${r.name}</div>
+        <div class="text-xs text-muted">- ${r.service}</div>
+      `;
+      return el;
+    }
+
+    function renderReviews() {
+      reviewsContainer.innerHTML = '';
+      reviewsData.forEach(r => reviewsContainer.appendChild(createReviewCard(r)));
+    }
+
+    /***************
+     * Modal (documents)
+     ***************/
+    const modal = document.getElementById('document-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const documentList = document.getElementById('document-list');
+    const modalClose = document.getElementById('modal-close');
+
+    function openModal(index) {
+      const s = servicesData[index];
+      modalTitle.textContent = s.title + ' - Required Documents';
+      documentList.innerHTML = '';
+      s.documents.forEach(d => {
+        const li = document.createElement('li');
+        li.textContent = d;
+        documentList.appendChild(li);
+      });
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.setAttribute('aria-hidden','false');
+      // trap focus simply
+      modalClose.focus();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    /***************
+     * Smooth scroll with header offset (works for all anchors)
+     ***************/
+    function computeHeaderOffset() {
+      const header = document.getElementById('site-header');
+      if (!header) return 24;
+      return header.getBoundingClientRect().height + 12; // extra spacing
+    }
+
+    function scrollToHash(hash) {
+      if (!hash) return;
+      const el = document.querySelector(hash);
+      if (!el) return;
+      const offset = computeHeaderOffset();
+      const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      // update focus for accessibility
+      el.setAttribute('tabindex','-1');
+      el.focus({ preventScroll: true });
+      setTimeout(()=> el.removeAttribute('tabindex'), 1200);
+    }
+
+    // attach handler to all nav links and action buttons
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a,button');
+      if (!a) return;
+      const href = a.getAttribute('href');
+      // handle anchors linking to sections
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        scrollToHash(href);
+      }
+      // action buttons with data-target
+      const target = a.dataset.target;
+      if (target && target.startsWith('#')) {
+        e.preventDefault();
+        scrollToHash(target);
+      }
+    });
+
+    // keyboard navigation for nav links (supports Enter)
+    document.querySelectorAll('.nav-link, .action-btn').forEach(n => {
+      n.addEventListener('keydown', (e) => { if (e.key === 'Enter') { const href = n.getAttribute('href'); if (href && href.startsWith('#')) { e.preventDefault(); scrollToHash(href); } } });
+    });
+
+    /***************
+     * Mobile menu (simple toggle)
+     ***************/
+    const mobileToggle = document.getElementById('mobile-toggle');
+    let mobileOpen = false;
+    mobileToggle && mobileToggle.addEventListener('click', () => {
+      if (!mobileOpen) {
+        // create a simple menu overlay
+        const overlay = document.createElement('div');
+        overlay.id = 'mobile-menu-overlay';
+        overlay.className = 'fixed inset-0 z-60 bg-black/70 flex flex-col p-6 gap-6';
+        overlay.innerHTML = `
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded lg bg-neon-blue flex items-center justify-center">JS</div>
+              <div>
+                <div class="font-bold text-lg">Jan Seva Kendra</div>
+                <div class="text-xs text-muted">Digital Services</div>
+              </div>
+            </div>
+            <button id="mobile-close" class="p-2">✕</button>
+          </div>
+          <div class="flex flex-col mt-6 gap-4">
+            <a href="#services" class="text-white text-lg">Services</a>
+            <a href="#reviews" class="text-white text-lg">Reviews</a>
+            <a href="#team" class="text-white text-lg">Team</a>
+            <a href="#contact" class="text-white text-lg">Contact</a>
+          </div>
+        `;
+        document.body.appendChild(overlay);
+        document.getElementById('mobile-close').addEventListener('click', () => {
+          document.getElementById('mobile-menu-overlay')?.remove();
+          mobileOpen = false;
+        });
+        mobileOpen = true;
+      }
+    });
+
+    /***************
+     * Safety: if main content cleared accidentally, restore using template
+     ***************/
+    function ensureContent() {
+      const app = document.getElementById('app');
+      if (!app) return;
+      if (app.innerHTML.trim() === '') {
+        const template = document.getElementById('site-template');
+        if (template) {
+          app.appendChild(template.content.cloneNode(true));
+          // re-render because data-driven content depends on JS
+          renderServices();
+          renderReviews();
+        }
+      }
+    }
+
+    // initial render
+    document.addEventListener('DOMContentLoaded', () => {
+      renderServices();
+      renderReviews();
+
+      // show-all button simple behavior
+      document.getElementById('show-all')?.addEventListener('click', () => scrollToHash('#services'));
+
+      // safety check every 6s (lightweight)
+      setInterval(ensureContent, 6000);
+    });
+
+    // In case page loaded with hash (direct link), scroll with offset
+    if (window.location.hash) {
+      // small timeout to allow layout to finish
+      setTimeout(() => scrollToHash(window.location.hash), 120);
+    }
+
+    /***************
+     * Small utilities: simulate download of services list as text
+     ***************/
+    document.getElementById('download-list')?.addEventListener('click', () => {
+      const lines = servicesData.map(s => `${s.title} - ${s.description}`);
+      const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'jan-seva-services.txt';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+  </script>
+</body>
+</html>
